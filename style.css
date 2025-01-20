@@ -35,4 +35,25 @@
     border: 2px solid #1F2937;
     font-size: 5vh;
     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+    background-color: skyblue;
+    color: black;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 7vh;
+    width: 54vh;
+    margin-top: 20px;
+}
+#reset{
+    width: 25vh;
+    height: 100%;
+    border: 2px solid #1F2937;
+    font-size: 3vh;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+    background-color: skyblue;
+    color: black;
+    border-radius: 8px;
 }
