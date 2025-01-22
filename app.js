@@ -35,11 +35,10 @@ function control(){
 
         return {pushValue,returnBoard};
     }
-    const gBoard = gameBoard();
+    let gBoard = gameBoard();
 
     function changePlayer(){
         currentPlayer = currentPlayer === "X"? "O" : "X";
-        console.log(`Its ${currentPlayer}'s turn!`);
     }
 
     function checkWinner(){
@@ -49,7 +48,9 @@ function control(){
         });
 
         if(winner){
-            console.log("wiiiiiiiiiiiiiiiner!");
+
+            console.log("winner!!!")
+    
             box.forEach(b => b.disabled = true);
             return true;
         }else{
@@ -63,22 +64,26 @@ function control(){
 
             let i = index;
 
+            boxS.textContent = currentPlayer;
+            gBoard.pushValue(i,currentPlayer);
 
-            if(currentPlayer == "X"){
-                boxS.textContent = "X";
-                gBoard.pushValue(i,"X");
-                checkWinner();
-                changePlayer();
-            }else{
-                boxS.textContent = "O";
-                gBoard.pushValue(i,"O");
-                checkWinner();
-                changePlayer();
-            }
+
+            if(checkWinner()) return;
+            changePlayer();
+            
             boxS.disabled = true;
             
         })
 
+    })
+
+    resetBtn.addEventListener('click',() =>{
+        box.forEach((boxSquare) =>{
+            boxSquare.textContent = "";
+            boxSquare.disabled = false;
+        });
+        gBoard = gameBoard();
+        currentPlayer = "X";
     })
 
     
