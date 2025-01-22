@@ -49,7 +49,10 @@ function control(){
 
         if(winner){
 
-            console.log("winner!!!")
+            setTimeout(() => {
+                alert(`${currentPlayer} Wins!!!`);
+                resetBtn.click();
+            }, 0);
     
             box.forEach(b => b.disabled = true);
             return true;

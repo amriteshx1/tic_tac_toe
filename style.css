@@ -35,8 +35,9 @@
     border: 2px solid #1F2937;
     font-size: 5vh;
     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
-    background-color: skyblue;
-    color: black;
+    background-color:#2D3A4A ;
+    color: white;
+    cursor: pointer;
 }
 .btn{
     display: flex;
@@ -56,4 +57,5 @@
     background-color: #1F2937;
     color: white;
     border-radius: 8px;
+    cursor: pointer;
 }
